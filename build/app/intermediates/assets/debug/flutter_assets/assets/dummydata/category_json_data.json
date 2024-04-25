@@ -1,0 +1,385 @@
+{
+  "Categories": [
+    {
+      "Title": "Food",
+      "IconPath": "0xe25a",
+      "NumberOfMerchants": 10,
+      "PopularityIndicator": true,
+      "Subcategories": [
+        {
+          "Title": "Breakfast",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MER1Food",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [
+                "one",
+                "two",
+                "there",
+                "four",
+                "five"
+              ],
+              "Offers": [
+                {
+                  "OfferTitle": "25 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-25T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                },
+                {
+                  "OfferTitle": "50 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-26T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                }
+              ],
+              "Rating": 4.0
+            },
+            {
+              "MerchantTitle": "MER2Food",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [
+                {
+                  "OfferTitle": "25 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-25T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                },
+                {
+                  "OfferTitle": "50 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-26T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                }
+              ],
+              "Rating": 4.0
+            }
+          ]
+        },
+        {
+          "Title": "Coffee",
+          "IconPath": "0xef68",
+          "Merchants": [
+            {
+              "MerchantTitle": "MER1coffee",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [
+                {
+                  "OfferTitle": "25 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-25T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                },
+                {
+                  "OfferTitle": "50 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-26T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                }
+              ],
+              "Rating": 4.0
+            },
+            {
+              "MerchantTitle": "MER2coffee",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            },
+            {
+              "MerchantTitle": "MER3coffee",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [
+                {
+                  "OfferTitle": "25 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-25T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                },
+                {
+                  "OfferTitle": "50 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-26T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                }
+              ],
+              "Rating": 4.0
+            },
+            {
+              "MerchantTitle": "MER4coffee",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [{
+                "OfferTitle": "25 % in total bill",
+                "Description": "Description",
+                "AvailableDateTime": "2024-04-25T20:17:52.4533762Z",
+                "FlashIndicator": "Test"
+              },
+                {
+                  "OfferTitle": "50 % in total bill",
+                  "Description": "Description",
+                  "AvailableDateTime": "2024-04-26T20:17:52.4533762Z",
+                  "FlashIndicator": "Test"
+                }],
+              "Rating": 4.0
+            },
+            {
+              "MerchantTitle": "Coffee4Mer",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Title": "Toys & Games",
+      "IconPath": "0xe5e8",
+      "NumberOfMerchants": 4,
+      "PopularityIndicator": true,
+      "Subcategories": [
+        {
+          "Title": "SubToys1",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MERToys",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Title": "Sports",
+      "IconPath": "0xf3c8",
+      "NumberOfMerchants": 7,
+      "PopularityIndicator": true,
+      "Subcategories": [
+        {
+          "Title": "SubToys1",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MERToys",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Title": "Gym",
+      "IconPath": "0xe28d",
+      "NumberOfMerchants": 9,
+      "PopularityIndicator": false,
+      "Subcategories": [
+        {
+          "Title": "SubToys1",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MERToys",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Title": "Electrician",
+      "IconPath": "0xe228",
+      "NumberOfMerchants": 14,
+      "PopularityIndicator": false,
+      "Subcategories": [
+        {
+          "Title": "SubToys1",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MERToys",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Title": "Hotels",
+      "IconPath": "0xe322",
+      "NumberOfMerchants": 4,
+      "PopularityIndicator": false,
+      "Subcategories": [
+        {
+          "Title": "SubToys1",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MERToys",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Title": "Car Services",
+      "IconPath": "0xe13d",
+      "NumberOfMerchants": 5,
+      "PopularityIndicator": false,
+      "Subcategories": [
+        {
+          "Title": "SubToys1",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MERToys",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Title": "Beauty",
+      "IconPath": "0xe5d8",
+      "NumberOfMerchants": 12,
+      "PopularityIndicator": false,
+      "Subcategories": [
+        {
+          "Title": "SubToys1",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MERToys",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Title": "Clothing",
+      "IconPath": "0xee4b",
+      "NumberOfMerchants": 18,
+      "PopularityIndicator": false,
+      "Subcategories": [
+        {
+          "Title": "SubToys1",
+          "IconPath": "0xf049",
+          "Merchants": [
+            {
+              "MerchantTitle": "MERToys",
+              "MerchantBrandImage": "",
+              "PhoneNumber": "79988",
+              "EmailAddress": "",
+              "LocationLat": 0.0,
+              "LocationLong": 0.0,
+              "MerchantLogo": "",
+              "Tags": [],
+              "Offers": [],
+              "Rating": 4.0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
