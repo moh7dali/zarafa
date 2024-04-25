@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:zarafa/features/main/presentation/provider/merchant_provider.dart';
+import 'package:zarafa/features/main/presentation/widgets/offer_widget.dart';
 
+import '../../../../core/constants/app_constants.dart';
 import '../../../../core/theme/app_theme.dart';
 import '../../domain/entities/merchant.dart';
 
@@ -30,29 +32,26 @@ class MerchantPage extends StatelessWidget {
                         right: 0,
                         height: MediaQuery.of(context).size.height * 0.3,
                         child: Container(
-                          decoration: const BoxDecoration(
-                            image: DecorationImage(
-                              image: NetworkImage(
-                                  "https://play-lh.googleusercontent.com/DTzWtkxfnKwFO3ruybY1SKjJQnLYeuK3KmQmwV5OQ3dULr5iXxeEtzBLceultrKTIUTr"),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
+                            child: CachedNetworkImage(
+                          fit: BoxFit.cover,
+                          imageUrl: merchant?.merchantBrandImage ?? "",
+                          errorWidget: (context, url, error) => Image.asset(AppConstants.placeHolderImage),
+                          placeholder: (context, url) => Image.asset(AppConstants.placeHolderImage),
+                        )),
                       ),
-                      // Second screen taking half the width and positioned below the first screen
                       Positioned(
                           top: MediaQuery.of(context).size.height * 0.25,
                           left: 10,
                           width: MediaQuery.of(context).size.width * 0.35,
                           bottom: 0,
                           child: Container(
-                            decoration: BoxDecoration(
-                                image: const DecorationImage(
-                                  image: NetworkImage(
-                                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeo1aedo_F7bzoaLcipBM4OcNYw92D2cA6hzD2PAMEEg&s"),
-                                  fit: BoxFit.cover,
-                                ),
-                                borderRadius: BorderRadius.circular(10)),
+                            decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                            child: CachedNetworkImage(
+                              fit: BoxFit.fitHeight,
+                              imageUrl: merchant?.merchantLogo ?? "",
+                              errorWidget: (context, url, error) => Image.asset(AppConstants.placeHolderImage),
+                              placeholder: (context, url) => Image.asset(AppConstants.placeHolderImage),
+                            ),
                           )),
                     ],
                   ),
@@ -90,41 +89,42 @@ class MerchantPage extends StatelessWidget {
                     )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 12.0),
-                  child: Row(
-                    children: [
-                      Wrap(
-                          spacing: 5.0,
-                          children: controller.showMore
-                              ? (merchant?.tags ?? [])
-                                  .map(
-                                    (tag) => Text(tag, style: AppTheme.textStyle(color: Colors.grey, size: AppTheme.size12)),
-                                  )
-                                  .toList()
-                              : (merchant?.tags ?? [])
-                                  .sublist(0, 4)
-                                  .map((tag) => Text(
-                                        tag,
-                                        style: AppTheme.textStyle(color: Colors.grey, size: AppTheme.size12),
-                                      ))
-                                  .toList()),
-                      Visibility(
-                        visible: (merchant?.tags?.length ?? 0) > 3,
-                        child: TextButton(
-                          onPressed: () {
-                            controller.showMore = !controller.showMore;
-                            controller.notifyListeners();
-                          },
-                          child: Text(
-                            controller.showMore ? '.Show Less' : '.All Tags',
-                            style: AppTheme.textStyle(color: AppTheme.primaryColor, size: AppTheme.size12),
+                if ((merchant?.tags ?? []).isNotEmpty)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                    child: Row(
+                      children: [
+                        Wrap(
+                            spacing: 5.0,
+                            children: controller.showMore
+                                ? (merchant?.tags ?? [])
+                                    .map(
+                                      (tag) => Text(tag, style: AppTheme.textStyle(color: Colors.grey, size: AppTheme.size12)),
+                                    )
+                                    .toList()
+                                : (merchant?.tags ?? [])
+                                    .sublist(0, 4)
+                                    .map((tag) => Text(
+                                          tag,
+                                          style: AppTheme.textStyle(color: Colors.grey, size: AppTheme.size12),
+                                        ))
+                                    .toList()),
+                        Visibility(
+                          visible: (merchant?.tags?.length ?? 0) > 3,
+                          child: TextButton(
+                            onPressed: () {
+                              controller.showMore = !controller.showMore;
+                              controller.notifyListeners();
+                            },
+                            child: Text(
+                              controller.showMore ? '.Show Less' : '.All Tags',
+                              style: AppTheme.textStyle(color: AppTheme.primaryColor, size: AppTheme.size12),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -211,13 +211,37 @@ class MerchantPage extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                      child: Text(
+                        "Available Offers",
+                        style: AppTheme.textStyle(color: AppTheme.blackColor, size: AppTheme.size18),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Text(
+                      "Amman",
+                      style: AppTheme.textStyle(color: AppTheme.blackColor, size: AppTheme.size12),
+                    ),
+                  ],
+                ),
                 ListView.builder(
                   shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: merchant?.offers?.length ?? 0,
                   itemBuilder: (context, index) {
-                    return Text("${merchant?.offers?[index].offerTitle}");
+                    return OfferWidget(offer: merchant?.offers?[index]);
                   },
-                )
+                ),
+                SizedBox(height: 20)
               ],
             ),
           ),

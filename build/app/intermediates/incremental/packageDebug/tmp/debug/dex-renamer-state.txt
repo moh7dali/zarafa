@@ -1,4 +1,4 @@
-#Thu Apr 25 20:21:00 EET 2024
-base.0=/Users/mohammadalisasa/Desktop/Apps/zarafa/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Thu Apr 25 21:53:47 EET 2024
+base.0=/Users/mohammadalisasa/Documents/github/zarafa/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

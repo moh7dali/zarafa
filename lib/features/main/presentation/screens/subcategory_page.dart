@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:zarafa/features/main/presentation/provider/subcategories_provider.dart';
-import 'package:zarafa/features/main/presentation/widgets/categories_widget.dart';
 import 'package:zarafa/features/main/presentation/widgets/subcategories_widget.dart';
 
 import '../../../../core/theme/app_theme.dart';
 import '../../domain/entities/category.dart';
-import '../../domain/entities/merchant.dart';
-import '../../domain/entities/subcategory.dart';
 import '../widgets/merchant_widget.dart';
 
 class SubCategoryPage extends StatelessWidget {
@@ -99,7 +95,8 @@ class SubCategoryPage extends StatelessWidget {
                 DefaultTabController(
                   length: 27,
                   child: TabBar(
-                    indicator: const BoxDecoration( // Custom indicator for selected tab
+                    indicator: const BoxDecoration(
+                      // Custom indicator for selected tab
                       border: Border(
                         bottom: BorderSide(color: Colors.transparent, width: 1.0), // Example colored border
                       ),
@@ -127,7 +124,11 @@ class SubCategoryPage extends StatelessWidget {
                     },
                     tabs: [
                       Card(
-                          color: controller.selectedLetter == "" ? AppTheme.primaryColor : null,
+                          shape: RoundedRectangleBorder(
+                              side: BorderSide(color: controller.selectedLetter == "" ? AppTheme.primaryColor : AppTheme.whiteColor, width: 2),
+                              borderRadius: BorderRadius.circular(10)),
+                          surfaceTintColor: AppTheme.whiteColor,
+                          color: controller.selectedLetter == "" ? AppTheme.backCardColor : AppTheme.whiteColor,
                           child: Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 15),
                             child: Tab(text: "All"),
@@ -135,7 +136,14 @@ class SubCategoryPage extends StatelessWidget {
                       ...List.generate(
                           26,
                           (index) => Card(
-                              color: controller.selectedLetter == String.fromCharCode(65 + index) ? AppTheme.primaryColor : null,
+                              shape: RoundedRectangleBorder(
+                                  side: BorderSide(
+                                      color:
+                                          controller.selectedLetter == String.fromCharCode(65 + index) ? AppTheme.primaryColor : AppTheme.whiteColor,
+                                      width: 2),
+                                  borderRadius: BorderRadius.circular(10)),
+                              surfaceTintColor: AppTheme.whiteColor,
+                              color: controller.selectedLetter == String.fromCharCode(65 + index) ? AppTheme.backCardColor : AppTheme.whiteColor,
                               child: Padding(
                                 padding: const EdgeInsets.symmetric(horizontal: 15),
                                 child: Tab(text: String.fromCharCode(65 + index)),

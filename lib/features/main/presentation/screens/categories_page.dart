@@ -23,6 +23,8 @@ class CategoriesPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Card(
+                    shape: RoundedRectangleBorder(side: BorderSide(color: Colors.grey.withOpacity(.65),width: 1),borderRadius: BorderRadius.circular(10)),
+                    color: AppTheme.whiteColor,
                     child: TextField(
                       onChanged: (val) {
                         value.searchFun(val);
@@ -31,7 +33,7 @@ class CategoriesPage extends StatelessWidget {
                           border: OutlineInputBorder(borderSide: BorderSide(color: AppTheme.whiteColor)),
                           enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: AppTheme.whiteColor)),
                           focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: AppTheme.whiteColor)),
-                          hintText: 'search',
+                          hintText: 'Search Category',
                           hintStyle: AppTheme.textStyle(color: Colors.grey, size: AppTheme.size16),
                           contentPadding: EdgeInsets.symmetric(horizontal: 8, vertical: 0),
                           prefixIcon: Icon(Icons.search)),

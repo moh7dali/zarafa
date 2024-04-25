@@ -4,7 +4,7 @@
             "outputFile": "com.example.zarafa.app-mergeDebugResources-11:/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/mohammadalisasa/Desktop/Apps/zarafa/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/mohammadalisasa/Documents/github/zarafa/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

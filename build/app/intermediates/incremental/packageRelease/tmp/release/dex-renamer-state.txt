@@ -1,0 +1,4 @@
+#Thu Apr 25 23:01:30 EET 2024
+base.0=/Users/mohammadalisasa/Documents/github/zarafa/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

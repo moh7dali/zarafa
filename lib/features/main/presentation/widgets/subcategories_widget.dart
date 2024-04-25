@@ -1,13 +1,10 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:zarafa/core/theme/app_theme.dart';
 import 'package:zarafa/features/main/domain/entities/subcategory.dart';
 
-import '../../domain/entities/category.dart';
 import '../provider/subcategories_provider.dart';
-import '../screens/subcategory_page.dart';
 
 class SubCategoriesWidget extends StatelessWidget {
   const SubCategoriesWidget({super.key, this.subcategory});
@@ -38,6 +35,7 @@ class SubCategoriesWidget extends StatelessWidget {
               Card(
                 color: AppTheme.backCardColor,
                 shape: RoundedRectangleBorder(
+                  side: BorderSide(color: controller.selectedSubcategory == subcategory ? AppTheme.primaryColor : AppTheme.whiteColor),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: Padding(
